@@ -5,3 +5,6 @@ Estrutura de projeto feito com o framework LARAVEL em PHP, na versão 7.25.0 e u
 - Grupo de Permissôes;
 
 
+Atenção: Criar campo SENHA_PADRAO no .env para redefinição de senha dos usuários;
+
+
