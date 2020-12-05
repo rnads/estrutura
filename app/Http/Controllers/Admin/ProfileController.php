@@ -72,7 +72,7 @@ class ProfileController extends Controller
         }
 
       
-        $name = $this->uploadFile($request->file('img'), 'teste', 'users');
+        $name = $this->uploadFile($request->file('img'), Str::slug(auth()->user()->name), 'users');
 
         $request['img_profile'] = $name;
 
