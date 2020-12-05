@@ -71,10 +71,8 @@ class ProfileController extends Controller
             return redirect()->route('admin.perfil.index');
         }
 
-        $name = Str::slug(auth()->user()->name) . '-' . auth()->user()->id . '.' . $request->file('img')->extension();
-
-        $path = $request->file('img')
-            ->storeAs('users', $name);
+      
+        $name = $this->uploadFile($request->file('img'), 'teste', 'users');
 
         $request['img_profile'] = $name;
 
@@ -84,4 +82,16 @@ class ProfileController extends Controller
         notify()->success('Salvo com sucesso', 'Perfil');
         return redirect()->route('admin.perfil.index');
     }
+
+    public function uploadFile($file, $name, $folder, $maxSize = "")
+    {
+        $nameFile = Str::slug($name . "-" . md5(Carbon::now()));
+
+        $extensao = $file->getClientOriginalExtension();
+
+        $file->move($folder, $nameFile . ".$extensao");
+
+        return $nameFile . ".$extensao";
+    }
+
 }
