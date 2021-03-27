@@ -16,11 +16,5 @@ class GroupsTableSeeder extends Seeder
         DB::table('groups')->insert([
             'name' => 'Admin'
         ]);
-        DB::table('groups')->insert([
-            'name' => 'Manager'
-        ]);
-        DB::table('groups')->insert([
-            'name' => 'Client'
-        ]);
     }
 }
