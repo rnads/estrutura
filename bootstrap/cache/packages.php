@@ -56,17 +56,6 @@
       0 => 'Lucascudo\\LaravelPtBRLocalization\\LaravelPtBRLocalizationServiceProvider',
     ),
   ),
-  'mckenziearts/laravel-notify' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Mckenziearts\\Notify\\LaravelNotifyServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'Notify' => 'Mckenziearts\\Notify\\Facades\\LaravelNotify',
-    ),
-  ),
   'nesbot/carbon' => 
   array (
     'providers' => 
@@ -90,6 +79,29 @@
     'aliases' => 
     array (
       'Acl' => 'TJGazel\\LaravelDocBlockAcl\\Facades\\Acl',
+    ),
+  ),
+  'tjgazel/laravel-toastr' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'TJGazel\\Toastr\\ToastrServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Toastr' => 'TJGazel\\Toastr\\Facades\\Toastr',
+    ),
+  ),
+  'tymon/jwt-auth' => 
+  array (
+    'aliases' => 
+    array (
+      'JWTAuth' => 'Tymon\\JWTAuth\\Facades\\JWTAuth',
+      'JWTFactory' => 'Tymon\\JWTAuth\\Facades\\JWTFactory',
+    ),
+    'providers' => 
+    array (
+      0 => 'Tymon\\JWTAuth\\Providers\\LaravelServiceProvider',
     ),
   ),
 );

@@ -18,7 +18,6 @@ class UserSeeder extends Seeder
             'email' => 'admin@admin.com',
             'img_profile' => 'user-padrao.png',
             'status' => 1,
-            'group_id' => 1,
             'password' => Hash::make('admin'),
         ]);
     }

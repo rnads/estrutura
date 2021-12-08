@@ -15,10 +15,12 @@
         "laravel/framework": "^7.24",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.1",
-        "livewire/livewire": "^2.2",
+        "lcobucci/jwt": "3.3.3",
+        "livewire/livewire": "^2.8",
         "lucascudo/laravel-pt-br-localization": "^1.1",
-        "mckenziearts/laravel-notify": "^1.1",
-        "tjgazel/laravel-docblock-acl": "^1.5"
+        "tjgazel/laravel-docblock-acl": "^3.0",
+        "tjgazel/laravel-toastr": "^1.1",
+        "tymon/jwt-auth": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

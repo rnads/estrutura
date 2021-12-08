@@ -1,9 +1,8 @@
 <?php
 
-use App\Http\Controllers\Admin\Index as AdminIndex;
-use App\Http\Livewire\Admin\Index;
-use App\Http\Livewire\Teste;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use TJGazel\LaravelDocBlockAcl\Facades\Acl;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,5 +44,3 @@ Route::prefix('admin')->name('admin.')->middleware('auth', 'acl')->group(functio
         return view('admin.gallery.index');
     })->name('galeria');
 });
-
-//->middleware(['password.confirm']);
