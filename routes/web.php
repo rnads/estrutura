@@ -23,7 +23,7 @@ Acl::routes([
 
 Auth::routes([
     'register' => false,
-    'verify' => true
+    'verify' => false
 ]);
 
 
@@ -33,7 +33,7 @@ Route::prefix('/')->name('site.')->group(function () {
     });
 });
 
-Route::prefix('admin')->name('admin.')->middleware('auth', 'acl')->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['auth', 'acl'])->group(function () {
 
     Route::get('/', 'Admin\DashboardController@index')->name('index');
     Route::resource('/perfil', 'Admin\ProfileController')->only(['index', 'update', 'store']);

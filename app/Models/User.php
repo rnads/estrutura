@@ -2,15 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use TJGazel\LaravelDocBlockAcl\Models\Contracts\UserAclContract;
-use TJGazel\LaravelDocBlockAcl\Models\traits\UserAcltrait;
+use TJGazel\LaravelDocBlockAcl\Models\Contracts\UserAcl as UserAclContract;
+use TJGazel\LaravelDocBlockAcl\Models\traits\UserAcl as UserAcltrait;
 
 class User extends Authenticatable implements UserAclContract
 {
-    use Notifiable, UserAcltrait;
+    use Notifiable, UserAclTrait;
 
     /**
      * The attributes that are mass assignable.
@@ -18,7 +17,7 @@ class User extends Authenticatable implements UserAclContract
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'img_profile', 'status', 'group_id', 'password',
+        'name', 'email', 'img_profile', 'status', 'password',
     ];
 
     /**

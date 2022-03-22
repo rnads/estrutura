@@ -18,22 +18,21 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    @notifyCss
     <link href="{{ asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
-
+    @livewireStyles
 </head>
 
 <body class="bg-gradient-primary">
 
     @yield('content')
 
-    @include('notify::messages')
+    {{-- @include('notify::messages') --}}
 
     <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    @notifyJs
-
+    @livewireScripts
+    {!! toastr()->render() !!}
 </body>
 
 </html>
